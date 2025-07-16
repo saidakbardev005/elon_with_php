@@ -1,0 +1,16 @@
+services:
+  web:
+    build: .
+    container_name: api_realtime_php
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DB_HOST=167.235.222.200
+      - DB_PORT=3306
+      - DB_USER=ulogist1_user_uz
+      - DB_PASS=parol3797A@
+      - DB_NAME=ulogist1_db_uz
+    restart: unless-stopped
